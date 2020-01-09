@@ -150,4 +150,6 @@ Route::get('/insert', function(){
 // });
 
 
-//fan coba deh, masuk apa nggak
+//fan coba deh, masuk apa nggak,
+
+//masuk nih di pc gue
