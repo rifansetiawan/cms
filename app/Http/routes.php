@@ -18,9 +18,9 @@ use App\Post;
 
 // Route::get('/posts', 'PostsController@index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/contact', function () {
 //     return "Hi this is contact page";
