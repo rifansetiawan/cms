@@ -18,9 +18,9 @@ use App\Post;
 
 // Route::get('/posts', 'PostsController@index');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/contact', function () {
 //     return "Hi this is contact page";
@@ -89,9 +89,9 @@ use App\Post;
 
 // });
 
-Route::get('/insert', function(){
-	DB::insert('insert into posts(title, content) value(?,?)',['Judul kedua PHP','Isi dari PHP content harus bagus, bismillah']);
-});
+// Route::get('/insert', function(){
+// 	DB::insert('insert into posts(title, content) value(?,?)',['Judul kedua PHP','Isi dari PHP content harus bagus, bismillah']);
+// });
 
 /*Route::resource('posts','PostsController');*/
 
@@ -173,8 +173,8 @@ Route::get('/insert', function(){
 |--------------------------------------------------------------------------
 |*/
 
-Route::get('/create', function(){
+// Route::get('/create', function(){
 
-	Post::create(['title'=>'Hai this is Rifan' , 'content'=>'Rifan is learning now about laravel, that\'s cool' ]);
+// 	Post::create(['title'=>'Hai this is Rifan' , 'content'=>'Rifan is learning now about laravel, that\'s cool' ]);
 
-});
+// });
