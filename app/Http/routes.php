@@ -148,3 +148,6 @@ Route::get('/insert', function(){
 
 
 // });
+
+
+//fan coba deh, masuk apa nggak
