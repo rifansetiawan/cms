@@ -89,7 +89,9 @@ use App\Post;
 
 // });
 
-
+Route::get('/insert', function(){
+	DB::insert('insert into posts(title, content) value(?,?)',['Judul kedua PHP','Isi dari PHP content harus bagus, bismillah']);
+});
 
 /*Route::resource('posts','PostsController');*/
 
@@ -103,29 +105,46 @@ use App\Post;
 |--------------------------------------------------------------------------
 |*/
 
-Route::get('/read', function() {
+// Route::get('/read', function() {
 
-	//kita kan mau nampilin posts, nah berarti kita declare variable posts dong yaudah declare dulu:
+// 	//kita kan mau nampilin posts, nah berarti kita declare variable posts dong yaudah declare dulu:
 
-	//$posts//-------------->kaya gini tok , diantara backslash
+// 	//$posts//-------------->kaya gini tok , diantara backslash
 	
-	//nah tuh udah udah dideclare , setelah dideclare mau di isi apaan tuh si posts , -
-	//-isi lah value dari variablenya, isinya dari mana ? yah dari model si Posts
-	//berarti :
-	//$posts = Post::all();// udah gini doang..
+// 	//nah tuh udah udah dideclare , setelah dideclare mau di isi apaan tuh si posts , -
+// 	//-isi lah value dari variablenya, isinya dari mana ? yah dari model si Posts
+// 	//berarti :
+// 	//$posts = Post::all();// udah gini doang..
 
 
-	//setelah udah dideclare kan posts nya , udah dapet nilai nilainya, yaudah tampilin aja pakai foreach
+// 	//setelah udah dideclare kan posts nya , udah dapet nilai nilainya, yaudah tampilin aja pakai foreach
 
-	//hasil akhirnya kaya dibawah:
+// 	//hasil akhirnya kaya dibawah:
 
-	$posts = Post::find(1);
+// 	$posts = Post::where('id',2)->orderBy('id','desc')->take(1)->get();
 
-	return $posts->content;
-	// foreach($posts as $post){
+// 	return $posts;
+// 	// foreach($posts as $post){
 
-	// 	return $post->title;
+// 	// 	return $post->title;
 
-	// }
+// 	// }
 
-});
+// });
+
+
+/*
+|--------------------------------------------------------------------------
+| CARA LAIN ELOQUENT -> FOR YOU INFORMATIONS ONLY, CAN'T BE RUN
+|--------------------------------------------------------------------------
+|*/
+
+
+// Route::get('/findmore', function(){
+
+// 	$posts = Post::where('users_count','<',50)->FirstOrFail();
+
+// 	return $posts;
+
+
+// });
