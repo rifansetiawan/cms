@@ -149,7 +149,32 @@ Route::get('/insert', function(){
 
 // });
 
+/*
+|--------------------------------------------------------------------------
+| INSERT/SAVE ELOQUENT 
+|--------------------------------------------------------------------------
+|*/
 
-//fan coba deh, masuk apa nggak,
+// Route::get('/insertE', function(){
 
-//masuk nih di pc gue
+// 	$post = Post::find(1);
+
+// 	$post-> title = 'Hai, updated 1';
+// 	$post-> content = 'number 1 content of eloquent insert has been updated, pretty cool';
+
+// 	$post -> save();
+
+// });
+
+
+/*
+|--------------------------------------------------------------------------
+| CREATE DATA ELOQUENT 
+|--------------------------------------------------------------------------
+|*/
+
+Route::get('/create', function(){
+
+	Post::create(['title'=>'Hai this is Rifan' , 'content'=>'Rifan is learning now about laravel, that\'s cool' ]);
+
+});
