@@ -173,8 +173,8 @@ use App\Post;
 |--------------------------------------------------------------------------
 |*/
 
-// Route::get('/create', function(){
+Route::get('/create', function(){
 
-// 	Post::create(['title'=>'Hai this is Rifan' , 'content'=>'Rifan is learning now about laravel, that\'s cool' ]);
+	Post::create(['title'=>'Hai this is Rifan' , 'content'=>'Rifan is learning now about laravel, that\'s cool' ]);
 
-// });
+});
