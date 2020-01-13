@@ -1,5 +1,10 @@
 <?php
 use App\Post;
+use App\User;
+//use Symfony\Component\Routing\Route;
+
+//use Symfony\Component\Routing\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -18,9 +23,9 @@ use App\Post;
 
 // Route::get('/posts', 'PostsController@index');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/contact', function () {
 //     return "Hi this is contact page";
@@ -175,6 +180,49 @@ use App\Post;
 
 Route::get('/create', function(){
 
-	Post::create(['title'=>'Hai this is Rifan' , 'content'=>'Rifan is learning now about laravel, that\'s cool' ]);
+	Post::create(['title'=>'3_Hai this is Rifan' , 'content'=>'3_Rifan is learning now about laravel, that\'s cool' ]);
 
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| UPDATE DATA ELOQUENT 
+|--------------------------------------------------------------------------
+|*/
+
+// Route::get('/update', function () {
+// 	Post::where('id', 1)->where('isAdmin', 0)->update(['title'=>'Hai rifan sayang, semoga ini bener yaaa']);
+	
+// });
+
+// Route::get('/restoredelete', function () {
+// 	$post = Post::withTrashed()->restore();
+// });
+
+
+
+// Route::get('/readsoftdelete', function () {
+// 	$posts = Post::withTrashed('isAdmin',0)->get();
+
+// 	//return $post;
+// 	foreach ($posts as $key => $post) {
+// 		# code...
+// 		return $posts;
+// 		return "\n";
+// 	}
+// });
+
+/*
+|--------------------------------------------------------------------------
+| BAB 11  Laravel Fundamentals - Database - Eloquent Relationships 
+|--------------------------------------------------------------------------
+|*/
+
+Route::get('/user/{id}/post', function($id){
+	return User::find($id)->post->content;
+});
+
+Route::get('post/{id}/user', function ($id) {
+	return Post::find($id)->user->name;
 });
